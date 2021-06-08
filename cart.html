@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cart page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/log in.css" />
+ <script>
+  if (full_name.value.length < 2 || !/^[A-Za-z\s]+$/.test(full_name.value)) { 
+  textHint.innerHTML = "<p style='color:red;font-size: 18px;'>Please Fill Your Name Properly</p>";
+  full_name.focus()
+  full_name.required=true;
+  full_name.setCustomValidity("Please Fill Your Name Properly");
+  return false; 
+}
+else{
+textHint.innerHTML = "";
+full_name.required=false;
+full_name.setCustomValidity("");
+
+if (!/^\+?([0]{1})\)?([0-9]{9,10})$/.test(phone_no.value) && !/^\+?([91]{2})\)?([0-9]{9,10})$/.test(phone_no.value) ) { 
+textHint.innerHTML = "<p style='color:red;font-size: 18px;'>Please Fill Your Ph No With +91 Or 0</p>";
+ phone_no.focus()
+ phone_no.required=true;
+ phone_no.setCustomValidity("Please Fill Your Ph No With +91 Or 0");
+  return false;
+ }
+ else{
+textHint.innerHTML = "";
+phone_no.focus()
+phone_no.required=false;
+phone_no.setCustomValidity("");
+}
+
+if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) { 
+ textHint.innerHTML = "<p style='color:red;font-size: 18px;'>Please Fill Your Email Id Properly</p>";
+ email.focus()
+ email.required=true;
+ email.setCustomValidity("Please Fill Your Email Id Properly");
+  return false;
+}
+else {
+
+email.focus()
+email.required=true;
+ email.setCustomValidity("");
+ }
+ return true;
+ }
+		</script>
+
+</script>
+</head>
+<body id= "background"> 
+     <header>
+               
+  <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+
+  <ul id="myMenu">
+    <li><a href="../html/Sign IN .html">Sign IN</a></li>
+    <li><a href="../html/Log IN.html">Log IN</a></li>
+    <li><a href="../html/home.html">Home</a></li>
+    <li><a href="../html/fashion.html">Fashion</a></li>
+    <li><a href="../html/supermarket.html">Super Market</a></li>
+    <li><a href="../html/electronics.html">Electronics</a></li>
+    <li><a href="../html/Healthy and beauty.html">Healthy And Beauty</a></li>
+    <li><a href="../html/home and offic.html">Home And Office</a></li>
+    <li><a href="../html/sporting goods.html">Sporting Goods</a></li>
+    <li><a href="../html/cart.html">Carts</a></li>
+  </ul>     
+    </header>
+<main>
+    <img  src="../image/add-to-cart.png" id="trooly"><br><br><br>
+    <button type="submit" id="CONTINUE"><a href="../html/home.html">CONTINUE SHOPPING</a></button>
+
+    <form action="" method="post" onsubmit="return on_form_sbmt()">
+			<input type="text" name="full_name" id="id_full_name" placeholder="Full Name"  required /><br/><br/>
+			<input type="tel" name="phone_no" id="id_phone_no" placeholder="Phone No with country code or 0"  required /><br/><br/>
+			<input type="email" name="email" id="id_email"  placeholder="Email Address"  required />	
+			
+			<input type="submit" name="form_submit" value="Submit The Form" id="register"/>
+		</form>
+
+    
+    <br><br><br><br><br><br><br>
+ </main> 
+ <footer  >
+ <div class="phone">
+            
+    <i class="fas fa-phone-alt"></i>
+    <h3>call us<img src="../image/2208224.png" class="icon1"></h3><br><br>
+    <p>19011</p>
+</div>
+<div class="email">
+    <i class="fas fa-envelope-open"></i>
+    <h3>mail us</h3>
+    <p>mail@info.com</p>
+    </div><br><br><br><br><br><br>
+<div id="t.e-shopping">
+     <i class="fas fa-user-md"></i>
+     <h3 class="paragraph"align="center">T.E-SHOPPING</h3>
+    <p  class="paragraph"> 
+      Buy your favorite food and food through our Jumia supermarket online that is full of all the food ingredients you may need, in addition to all the home necessities. You can easily shop for any home appliances from a large collection available online that contain appliances that include refrigerators, washing machines or air conditioners, for example. Buy from the largest assortment of high quality electronics online from trusted suppliers and brands. You can buy a new TV for the living room, your favorite smartphone or even a PlayStation 4 and PS5, For example. Get the latest phone releases before anyone else in the country, whether you want to buy the latest phones from Apple, Xiaomi, Infinix, Samsung or Realme, among many other phone brands to choose from at the cheapest mobile prices in Egypt. We have another amazing collection available that is dedicated to computers, laptops and all their accessories. Shop for a printer, scanner, computer supplies or computer monitor to optimize your computer or laptop experience! All these products and more are provided at Jumia Egypt at the cheapest price in the market, so buy online today and enjoy the fastest delivery anywhere in Egypt.
+    
+     </p>
+</div>
+<div id="follow-us">
+  <h3>Follow Us</h3>
+  <i class="fab fa-facebook-f"><img src="../image/facebook.png"id="ICON"></i>
+<i class="fab fa-twitter"><img src="../image/twitter.png"id="ICON"></i>
+<i class="fab fa-instagram-p"><img src="../image/1000_F_320883393_q7ROQwEkFchU1WGGSfwxCG9X9CLUW0JD.jpg" id="ICON">></i>
+</div>
+         
+</footer>             
+ 
+</body>
+</html>
